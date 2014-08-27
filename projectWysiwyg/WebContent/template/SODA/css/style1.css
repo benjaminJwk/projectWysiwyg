@@ -1,0 +1,229 @@
+@import url(http://fonts.googleapis.com/earlyaccess/nanumbrushscript.css);
+@import url("http://fonts.googleapis.com/earlyaccess/nanumgothic.css") ;
+@import url(http://fonts.googleapis.com/earlyaccess/nanumpenscript.css);
+@import url(http://fonts.googleapis.com/earlyaccess/nanummyeongjo.css) ;
+
+
+*
+{ margin: 0;
+  padding: 0;}
+
+#header{
+	font: 'Nanum Myeonjo';
+	height: 80px;
+}
+
+body
+{ color: black;
+	font: 'Nanum Brush Script';
+}
+
+h1 {
+	float: left;
+	margin: 20px 30px 50px;
+	font: bold 'Nanum Brush Script';
+	color: #000;
+	}
+
+
+.logo{
+	color: #ec0000;
+	font: 'Nanum Brush Script';
+}
+
+#nav { float: right; margin: 20px 0 50px 0;}
+	#nav li { list-style: none; display: inline; }
+	#nav li a { float: left; padding: 6px 20px; margin: 3px 2px 0 0; color: #000000;  text-decoration: none;}
+	#nav li a:hover { color: #e00606; }
+
+#side
+{ float: right;
+  width: 240px;
+  margin-top:100px;
+  margin-bottom: 10px;
+  margin-left: 850px;
+  position: absolute;
+  }
+	
+p
+{ padding: 0 0 10px 0;
+  line-height: 28px;
+  font-size: 100% }
+
+h2, h3, h4, h5, h6 
+{
+  color: #000;
+  letter-spacing: -1px;
+  margin: 0 0 10px 0;}
+
+#div1{
+	height: 380px;
+	text-align: center;
+}
+
+#content{
+	float: left;
+	margin-left: 50px;
+	width: 850px;
+	position: absolute;
+}
+
+#con1
+{ width: 680px;
+  margin-top: 20px;
+  margin-left: 80px;
+  margin-bottom: 20px;
+}  
+  
+#con2
+{width: 330px;
+  margin-top: 20px;
+  margin-left: 80px;
+  margin-bottom: 20px;
+
+}
+#con4
+{width: 330px;
+  margin-top: 20px;
+  margin-left: 80px;
+  margin-bottom: 20px;
+
+}
+
+#con3
+{width: 330px;
+  position: absolute;
+  margin-top: 287px;
+  margin-left: 460px;
+}
+
+#con5
+{width: 330px;
+  position: absolute;
+  margin-top: 550px;
+  margin-left: 460px;
+}
+#header,#footer,#content
+{ margin-left: auto; 
+  margin-right: auto;}
+ 
+#btn{
+	
+	float: right;
+	margin-top: 10px;
+	width: 110px;
+	height: 45px;
+}
+
+.modern {
+  display: inline-block;
+  padding: 8px 15px;
+  background: #ffd900;
+  transition: all 0.3s ease-out;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.5),
+    0 2px 2px rgba(0,0,0,0.3),
+    0 0 4px 1px rgba(0,0,0,0.2);
+    
+  /*font*/
+  color: white;
+  font-size: 1em;  
+}
+	.modern:hover  { background: #ffae00; }
+
+
+  
+#footer
+
+{
+
+padding-top: 10px;
+height: 70px; 
+margin-top: 850px;
+text-align: center;
+background-color: #ffd500;
+
+}
+#footer a, #footer a:hover
+{
+  color: black;
+  text-decoration: none;
+}
+
+#contact{
+	float: left;
+	margin-left: 100px;
+	width: 750px;
+	text-align: center;
+	margin-top: 200px;	
+	position: absolute;
+}
+
+
+.simple-input {
+    display: block;
+    padding: 5px;
+    border: 4px solid #fff700;
+    border-radius: 5px;
+    color: #333;
+    transition: all 0.3s ease-out;
+    width: 500px;
+    height: 20px;
+}
+ 
+.simple-input:hover {
+    border-radius: 8px
+}
+ 
+.simple-input:focus {
+    outline: none;
+    border-radius: 8px;
+    border-color: #ffa300;
+}
+
+
+.simple-message {
+    display: block;
+    padding: 5px;
+    border: 4px solid #fff700;
+    border-radius: 5px;
+    color: #333;
+    transition: all 0.3s ease-out;
+    width: 500px;
+    height: 150px;
+}
+ 
+.simple-message:hover {
+    border-radius: 8px
+}
+ 
+.simple-message:focus {
+    outline: none;
+    border-radius: 8px;
+    border-color: #ffa300;
+}
+
+#input1{
+	width: 520px;
+	margin-top: 80px;
+	text-align: center;
+	margin-left: 150px;
+	}
+#input2{
+	width: 520px;
+	margin-top: 10px;
+	text-align: center;
+	margin-left: 150px;
+	}
+#input3{
+	width: 520px;
+	margin-top: 10px;
+	text-align: center;
+	margin-left: 150px;
+	}
+#input4{
+	width: 520px;
+	margin-top: 10px;
+	text-align: center;
+	margin-left: 150px;
+	}

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE configuration
+PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+
+<!-- 객체별칭 -->
+<typeAliases>
+	<typeAlias type="wysiwyg.user.vo.UserVO" alias="userVo" />
+	<typeAlias type="wysiwyg.board.vo.BoardVO" alias="boardVo"/>
+	<typeAlias type="wysiwyg.board.vo.CommentVO" alias="commentVo"/>
+	<typeAlias type="wysiwyg.show.vo.ShowVO" alias="showVo"/>
+	<typeAlias type="wysiwyg.url.vo.UrlVO" alias="urlVo"/>
+</typeAliases>
+	
+<!-- mapper등록 -->     
+     <mappers>
+     	<mapper resource="wysiwyg/conf/BoardMapper.xml"/>
+     	<mapper resource="wysiwyg/conf/UserMapper.xml"/>
+     	<mapper resource="wysiwyg/conf/ShowMapper.xml"/>
+     </mappers>
+  
+</configuration>
+
+
+
+
+
+
+
+

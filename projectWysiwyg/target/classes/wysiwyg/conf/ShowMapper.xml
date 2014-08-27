@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="show">
+
+<resultMap type="showVo" id="vo">
+	<id column="page_id" property="pageId"/>
+	<id column="user_mail" property="userMail"/>
+	<result column="page_name" property="pageName"/>
+	<result column="templte_name" property="templteName"/>
+</resultMap>
+
+<resultMap type="urlVo" id="url">
+	<id column="url_name" property="urlName"/>
+	<result column="user_mail" property="userMail"/>
+	<result column="project_name" property="projectName"/>
+</resultMap>
+
+
+<select id="showSelect" resultMap="vo" parameterType="String">
+	select * from user_page where user_mail = #{value}
+</select>
+<delete id="showDelete" parameterType="showVo">
+	delete from user_page where page_id=${pageId} and user_mail=#{userMail} 
+</delete>
+<insert id="showInsert" parameterType="showVo">
+insert into user_page values(#{userMail},(select nvl(max(page_id),0)+1 from user_page where user_mail=#{userMail}), #{templteName},#{pageName})
+</insert>
+
+<insert id="makeUrl" parameterType="urlVo">
+insert into url values(#{urlName},#{userMail},#{projectName})
+</insert>
+<select id="mappingUrl" parameterType="String" resultMap="url">
+select * from url where url_name=#{value}
+</select>
+</mapper>

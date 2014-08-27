@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="user">
+
+<!-- 칼럼명과 property명을 일치 -->
+
+<resultMap type="userVo" id="vo">
+	<id column="user_mail" property="userMail"/>
+	<result column="user_name" property="userName"/>
+	<result column="user_password" property="userPassword"/>
+</resultMap>
+
+<insert id="userInsert" parameterType="userVo">
+	insert into user_info values(#{userMail},#{userName},#{userPassword})
+</insert>
+
+<select id="selectAll" resultMap="vo">
+
+</select>
+
+<select id="loginOk" resultType="String">
+	select 'qq' from user_info where user_mail=#{userMail} AND user_password=#{userPassword}
+</select>
+
+<select id="selectMyPage" resultMap="vo" parameterType="string">
+	select * from user_info where user_mail=#{value}
+</select>
+
+<update id="changePassword" parameterType="userVo" >
+	update user_info set user_password=#{userPassword} where user_mail=#{userMail}
+</update>
+
+
+</mapper>
+

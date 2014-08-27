@@ -1,0 +1,153 @@
+html {
+	 
+	 font-family: 'Trebuchet MS', sans-serif, Arial, Helvitica; 
+}
+
+body {
+	background-color: #000000; 
+	margin: 0;
+	
+	}
+	
+#background {
+	/* 	배경색변화 */	
+	background: url(../../shop_images/bg-body3.jpg) repeat;
+	min-height: 1300px;
+	border-top: 1px solid #cc9f0f;
+}
+#page {
+	/* 페이지 너비 */
+	width: 960px;
+	margin: 0 auto;
+}
+@font-face {
+ font-family: 'CorbenBold';
+ src: url('fonts/corben-bold-webfont.eot');
+ src: local('?'), url('fonts/corben-bold-webfont.woff') format('woff'),  url('fonts/corben-bold-webfont.ttf') format('truetype'),  url('fonts/corben-bold-webfont.svg') format('svg');
+ font-weight: normal;
+ font-style: normal;
+} 
+
+/*------------------------------ HEADER ------------------------------*/
+#header {
+	 min-height: 340px;
+	margin-bottom: 120px;
+	}
+
+/* 상단정보 (view bags, checkout) */
+#infos {
+	float: right;
+	color: #000000;
+	display: inline-block;
+	height: 30px;
+	width: 200px;
+	margin: 15px 0;
+}
+/* 상단정보 (각각 view bags, checkout) */
+
+#infos a {
+	color: #000000;
+	font-family: Arial;
+	font-size: 14px;
+	line-height: 30px;
+	margin: 0 5px;
+	text-decoration: none;
+}
+/** Logo **/
+#logo {
+	clear: both;
+	display: block;
+	height: 217px;
+	width: 950px;
+	margin: 0 auto;
+}
+/** Navigation **/
+#navigation {
+	height: 40px;
+	list-style-type: none;
+	margin: 0;
+	padding: 8px 20px 12px 0;
+}
+#navigation li {
+	float: left;
+	font-family: 'CorbenBold';
+	font-size: 22px;
+	font-weight: bold;
+	line-height: 40px;
+	width: 186px;
+	text-align: center;
+}
+#navigation a {
+	color: #000000;
+	text-decoration: none;
+}
+#navigation a:hover, #navigation li.selected a {
+	color: #000000;
+}
+
+
+/** Logo **/
+#logo {
+	clear: both;
+	display: block;
+	height: 217px;
+	width: 950px;
+	margin: 0 auto;
+}
+/*------------------------------ FOOTER ------------------------------*/
+#footer {
+	padding: 0 5px;
+}
+#description {
+	margin: 0 0 30px;
+	padding: 0 0 30px;
+}
+#description div {
+	float: left;
+	width: 180px;
+	margin-right: 50px;
+}
+#description div a.logo {
+	background: url(../../shop_images/logo-footer.gif) no-repeat;
+	display: block;
+	height: 30px;
+	width: 175px;
+	margin: 0 0 10px;
+}
+#description div span {
+	color: #000000;
+	display: block;
+	font-size: 11px;
+	line-height: 20px;
+}
+#description div span a {
+	color: #000000;
+	text-decoration: none;
+}
+#description p {
+	color: #000000;
+	font-size: 13px;
+	line-height: 20px;
+	margin: 20px 0;
+	text-align: justify;
+}
+#description p a {
+	color: #9d7912;
+}
+#footer div.navigation {
+	color: #000000;
+	font-size: 14px;
+	line-height: 20px;
+	width: 400px;
+	margin: 0 auto 20px;
+/* 	text-shadow: 0 1px 0 #af9e31;
+ */}
+#footer div.navigation a {
+	color: #000000;
+	padding: 0 15px;
+	text-decoration: none;
+/* 	text-shadow: 1px 1px 0 #af9e31;
+ */}
+#footer div.navigation a:hover {
+	color: #000000;
+}

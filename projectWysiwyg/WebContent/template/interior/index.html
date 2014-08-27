@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Distinctive - web development company</title>
+	
+	    <!-- CSS Global Compulsory -->
+    <link rel="stylesheet" href="../../../assets/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../assets/css/style.css">
+
+    <!-- CSS Implementing Plugins -->
+    <link rel="stylesheet" href="../../../assets/plugins/line-icons/line-icons.css">
+    <link rel="stylesheet" href="../../../assets/plugins/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../../assets/plugins/flexslider/flexslider.css">    
+    <link rel="stylesheet" href="../../../assets/plugins/owl-carousel/owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" href="../../../assets/plugins/layer-slider/layerslider/css/layerslider.css">
+
+    <!-- CSS Theme -->    
+    <link rel="stylesheet" href="../../../assets/css/themes/default.css" id="style_color">
+	 <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+	
+	<link id="styleCss" rel="stylesheet" type="text/css" href="css/style1.css" media="screen" />
+	
+	
+	<script type="text/javascript" src="../../../libs/jquery/jquery-1.11.1.min.js"></script>
+	<script>
+	$(function(){
+		
+		$("#wBtn").click(function(){
+			alert("write!!");
+			$.ajax({
+				url: "/projectWysiwyg/userWrite.do",
+				type: "post",
+				dataType: "text",
+				data : {writer:$("#writerBox").val(),contents:$("#contentsBox").val(),bId:$("#boardId").attr("value")},
+				success : function(result){
+					if(result == "success")
+					{
+						alert("게시글 등록 완료");	
+					}
+					else
+						alert("등록 실패");
+					location.href=location.href;
+				},
+				error : function(err){
+					alert(err);
+				}
+			});
+		});
+		
+		
+		$.ajax({
+			url: "/projectWysiwyg/boardSelect.do",
+			type: "post",
+			dataType: "json",
+			data: "bId="+$("#boardId").attr("value"),
+			success : function(result){
+				alert("읽어오자");
+				var table ="";
+				$("#boardTable tr:gt(0)").remove();
+				
+				$(result.list).each(function(index,item){
+					  table += "<tr>";
+					  table += "<td>"+item.boardNo+"</td>";
+				 	  table += "<td>"+item.boardWriter+"</td>";
+				 	  table += "<td>";
+				 	  table += item.boardContents
+				 	  table += "</td>";
+					  table += "<td>"+item.boardDate+"</td>";
+					  table += "</tr>";
+					});
+				  $("#boardTable tr:eq(0)").after(table);
+				
+			},
+			error : function(err){
+			}
+		});	
+	})
+	</script>
+</head>
+ <body>
+    <div id="header">
+	   <div id="main">
+			<ul id="menu">
+				<li ><a href="index.html">Home</a></li>		
+				<li><a href="Work.html">Work</a></li>			
+				<li><a href="about.html">About</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+		</div>
+	</div>
+  	
+	<div id="content">
+		<div class="line1"></div>
+		
+		<div id="pitch">
+			<h1>&nbsp; </h1>
+			<h2>&nbsp; </h2>
+		</div>
+		
+		<div class="left">
+			<h3>Notice</h3>
+			<p>공지사항</p>
+		</div>
+		
+		<div class="right">
+			<h3>Recent Work</h3>
+			<p></p>
+		</div>
+	
+	</div>
+	
+	<div id="footer">
+		<p>&copy; Copyright 2009 Distinctive &minus; Design: Luka Cvrk, <a href="http://www.solucija.com" title="Free CSS Templates">Solucija</a></p>
+	</div>
+</body>
+</html>

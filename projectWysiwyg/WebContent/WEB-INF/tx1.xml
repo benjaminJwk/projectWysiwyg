@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
+	
+		<bean	id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
+				p:driverClassName="oracle.jdbc.OracleDriver"
+				p:url="jdbc:oracle:thin:@203.252.166.201:1521:xe"
+				p:username="blink" p:password="blink"  p:maxActive="10"/>
+	
+	<bean 	id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean"
+				p:dataSource-ref="dataSource" 
+				p:configLocation="classpath:wysiwyg/conf/SqlMapConfig.xml"/>
+			
+	
+	<bean 	id="userDao" class="wysiwyg.dao.UserDaoImpl" >	
+	 <property name="sqlSessionFactory" ref="sqlSessionFactory"/>
+	</bean>
+		
+	<bean 	id="userService" class="wysiwyg.service.UserServiceImpl">
+	</bean>		
+	
+	
+	<bean 	id="boardDao" class="wysiwyg.dao.BoardDaoImpl" >	
+	 <property name="sqlSessionFactory" ref="sqlSessionFactory"/>
+	</bean>
+		
+	<bean 	id="boardService" class="wysiwyg.service.BoardServiceImpl">
+	</bean>
+	
+	<bean 	id="ShowDAO" class="wysiwyg.dao.ShowDaoImpl" >	
+	 <property name="sqlSessionFactory" ref="sqlSessionFactory"/>
+	</bean>
+		
+	<bean 	id="ShowService" class="wysiwyg.service.ShowServiceImpl">
+	</bean>
+		
+	<!-- spring tx를 위한 스키마 설정 -->
+	<bean 	id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager"
+				p:dataSource-ref="dataSource" />
+	
+	<tx:advice id="txAdvice" transaction-manager="transactionManager">
+		<tx:attributes>
+			<tx:method  name="*" propagation="REQUIRED"/>
+		</tx:attributes>
+	</tx:advice>
+		
+
+	<aop:config>
+		<aop:advisor advice-ref="txAdvice" pointcut="execution(public * wysiwyg.dao.*.*(..))" />
+	</aop:config>	
+</beans>
+

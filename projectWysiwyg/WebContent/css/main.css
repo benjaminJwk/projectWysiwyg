@@ -1,0 +1,86 @@
+@CHARSET "UTF-8";
+
+#layout		{background-color:#353535; width: 1000px; margin:0;}
+	
+#mainMenu 	{
+				width:850px;
+				height:100px;
+				margin: 0 auto;	
+				background-color: transparent;							
+			}
+#mainMenu ul li {
+			list-style: none;
+			color: white;
+			background-color: #2d2d2d;
+			float: left;
+			line-height: 100px;
+			vertical-align: middle;
+			text-align: center;
+}
+#mainMenu .menulink {
+			text-decoration: none;
+			color: white;
+			display: block;
+			width: 200px;
+			font-size: 20px;
+			font-weight: bold;
+			font-family: "Trebuchet MS", Dotum, Lithos Pro Regular;
+			
+}
+#mainMenu .menulink:hover {
+			color: yellow;
+			background-color: #4d4d4d;
+}
+
+#leftMenu 	{
+				width:150px;
+				height:400px; 
+				top:100px;	
+				left: auto;	
+				background-color: transparent;
+				float:left;							
+			}
+#leftMenu ul li {
+			list-style: none;
+			color: white;
+			background-color: #6d6d6d;
+			float: right;
+			line-height: 80px;
+			vertical-align: middle;
+			text-align: center;
+}
+#leftMenu .lmenulink {
+			text-decoration: none;
+			color: white;
+			display: block;
+			width: 150px;
+			font-size: 12px;
+			font-weight: bold;
+			font-family: "Trebuchet MS", Dotum, Lithos Pro Regular;
+			
+}
+#leftMenu .lmenulink:hover {
+			color: yellow;
+			background-color: #4d4d4d;
+}
+#logo {
+			top: 0px;
+			margin-top: 0;
+			
+	
+}
+#body ,#body .iframe_a{
+		border : none;
+		position : absolute;
+		width: 700px;
+		height: 400px;
+		left: 160px;
+		top: 120px;
+	}
+
+#footer{
+	top: 600px;
+	border :double 5px red;
+	position:absolute;
+	width: 100%;
+}

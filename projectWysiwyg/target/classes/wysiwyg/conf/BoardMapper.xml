@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="board">
+
+<resultMap type="boardVo" id="vo">
+	<id column="board_id" property="boardId"/>
+	<id column="board_no" property="boardNo"/>
+	<result column="board_writer" property="boardWriter"/>
+	<result column="board_subject" property="boardSubject"/>
+	<result column="board_contents" property="boardContents"/>
+	<result column="board_date" property="boardDate"/>
+	<collection property="comments" ofType="commentVo">
+		<id column="comment_no" property="commentNo"/>
+		<result column="comment_writer" property="commentWriter"/>
+		<result column="comment_contents" property="commentContents"/>
+		<result column="comment_date" property="commentDate"/>
+	</collection>
+</resultMap>
+
+
+<select id="boardSelect" resultMap="vo" parameterType="int">
+	select * 
+	from (select * from board_contents where board_id=${value}) contents
+	left join (select * from board_comments where board_id=${value}) comments 
+	on contents.board_id = comments.board_id and contents.board_no = comments.board_no
+	order by contents.board_no
+</select>
+<insert id="boardWrite" parameterType="boardVo">
+	insert into board_contents values(${boardId},(select nvl(max(board_no),0)+1 from board_contents where board_id=${boardId}),#{boardWriter},#{boardSubject},#{boardContents},sysdate)
+</insert>
+<delete id="boardDelete" parameterType="boardVo">
+	delete from board_contents where board_no=${boardNo} and board_id=${boardId} and board_writer=#{boardWriter}
+</delete>
+<insert id="boardComment" parameterType="commentVo">
+	insert into board_comments values(${boardId},${boardNo},(select nvl(max(comment_no),0)+1 from board_comments where board_id=${boardId} and board_no=${boardNo}),#{commentWriter},#{commentContents},sysdate)
+</insert>
+
+<insert id="createBoard" parameterType="int">
+	insert into board_info values(${value},'user','user')
+</insert>
+
+<select id="maxId" resultType="int">
+	select nvl(max(board_id),0)+1 from board_info
+</select>
+
+<select id="boardSelectNotice" resultMap="vo" parameterType="int">
+	select * from board_contents where board_id = ${value} and <![CDATA[rownum<=3]]>
+</select>
+<select id="boardSelectQna" resultMap="vo" parameterType="int">
+	select * from board_contents where board_id = ${value} and <![CDATA[rownum<=3]]>
+</select>
+
+</mapper>

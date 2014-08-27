@@ -1,0 +1,190 @@
+@import url(http://fonts.googleapis.com/earlyaccess/nanumbrushscript.css);
+@import url("http://fonts.googleapis.com/earlyaccess/nanumgothic.css") ;
+
+/* global reset */
+*{ margin: 0; padding: 0; }*
+:focus, :active { outline: 0; }
+
+body{
+	font: .9em 'Nanum Gothic';
+	background-image: url('../images/bgimg5.jpg');
+	color: #364659; }
+a { color: #EA5545; text-decoration: none; }
+img { border: 0; }
+h1 {  float: left; margin: 20px 0 50px; font-size: 4em; color: #fff; }
+h2 { font-size: 2.4em; font-weight: normal; margin: 0 0 20px; }
+h2 a:hover { background: #A82A15; color: #fff; }
+.hr { color: #364659; }
+p  { margin: 5px 0 15px; line-height: 1.6em; color: black; }
+#content { margin: 0 auto; width: 900px; }
+#top { float: right; margin: 38px 0 30px 0;}
+	#top li { list-style: none; display: inline; }
+	#top li a { float: left; padding: 6px 20px; margin: 3px 2px 0 0; color: #ccc; }
+	#top li a.current { color: #fff; background: #A82A15; }
+	#top li a:hover { background: #808080; color: #fff; }
+#intro { clear: both;  font-size: 1.3em;margin: 0 0 30px; }
+
+/* columns */
+#div1 {
+	clear: both;
+	margin-top: 4em;
+	padding-bottom: 3em;
+	border-bottom: 3px double #ddd;
+}
+.d1  { 
+	float: left; 
+	width: 19em; 
+	margin: 0 25px 0 0; 
+	padding: 0 15px 20px 0; 
+	border-right: 1px dotted #364659; 
+}
+.d3 { 
+	margin-right: 0; 
+	border: 0; 
+	padding-right: 0; 
+}
+#right h3,#left h3 { border-bottom: 1px solid #364659; margin-bottom: 2em; font-size: 1.5em; }
+#right img { margin: 0 3px 3px 0; border: 2px solid #364659; padding: 2px; width: 14em; height: 14em; }
+#left li { list-style: disc; }
+	#left li a { display: block; border-bottom: 1px solid #ccc; padding: 5px 5px; color: #EA5545;}
+#footer {
+	margin-left: 130px;
+	width: 800px;
+	height: 50px;
+	position: absolute;
+	margin-top: 900px;
+	color: black;
+}
+	
+/* side */
+#right { 
+	margin-top: 4em;
+	float: right; 
+	width: 265px; 
+}
+#left { 
+	float: left; 
+	width: 500px; 
+	margin-top: 4em;
+	margin-left: 2em;
+}
+
+
+
+	
+/*contact*/
+/*menu2*/
+
+.simple-input {
+    display: block;
+    padding: 5px;
+    border: 4px solid rgba(9,0,71,0.68);
+    border-radius: 5px;
+    color: #333;
+    transition: all 0.3s ease-out;
+    width: 500px;
+    height: 20px;
+    background-color: rgba(127,127,127,0.43);
+
+}
+ 
+.simple-input:hover {
+    border-radius: 8px
+}
+ 
+.simple-input:focus {
+    outline: none;
+    border-radius: 8px;
+    border-color: #08003c;
+}
+
+
+.simple-message {
+    display: block;
+    padding: 5px;
+    border: 4px solid rgba(9,0,71,0.68);
+    border-radius: 5px;
+    color: #ffffff;
+    transition: all 0.3s ease-out;
+    width: 500px;
+    height: 150px;
+    background-color: rgba(127,127,127,0.43);
+}
+ 
+.simple-message:hover {
+    border-radius: 8px
+}
+ 
+.simple-message:focus {
+    outline: none;
+    border-radius: 8px;
+    border-color: #08003c;
+}
+
+#input1{
+	width: 520px;
+	margin-top: 80px;
+	text-align: center;
+	margin-left: 150px;
+	}
+#input2{
+	width: 520px;
+	margin-top: 10px;
+	text-align: center;
+	margin-left: 150px;
+	}
+#input3{
+	width: 520px;
+	margin-top: 10px;
+	text-align: center;
+	margin-left: 150px;
+	}
+#input4{
+	width: 520px;
+	margin-top: 10px;
+	text-align: center;
+	margin-left: 150px;
+	}
+#contain { position: absolute; width: 850px; height: 600px; margin-top: 270px; margin-left: 150px; margin-right: 150px; text-align: center;}
+
+
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #ffffff;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #ffffff;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    #ffffff;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:    #ffffff;
+}
+
+
+#btn{
+	margin-top: 30px;
+	width: 110px;
+	height: 38px;
+	margin-left: 600px;
+}
+
+.modern {
+  display: inline-block;
+  padding: 8px 15px;
+  background: rgba(17,0,164,0.69);
+  border: 1px solid rgba(0,0,0,0.15);
+  transition: all 0.3s ease-out;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.5),
+    0 2px 2px rgba(0,0,0,0.3),
+    0 0 4px 1px rgba(0,0,0,0.2);
+    
+  /*font*/
+  color: white;
+  font-size: 13px;  
+}
+    
+    .modern:hover  { background: rgba(17,0,163,1); }
+

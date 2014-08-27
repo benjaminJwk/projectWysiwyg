@@ -1,0 +1,390 @@
+@import url(http://fonts.googleapis.com/earlyaccess/nanumbrushscript.css);
+@import url("http://fonts.googleapis.com/earlyaccess/nanumgothic.css") ;
+
+/* global reset */
+*{ margin: 0; padding: 0; }*
+:focus, :active { outline: 0; }
+
+body{
+	font: 14.5px 'Nanum Gothic';
+	background:black;
+	color: white; }
+#header {
+	margin: 0 auto;
+	width: 20em;
+	height: 4em;
+	position: absolute;
+	
+}
+#image{
+	text-align: right;
+	margin-top: 2em;
+	margin-left: 3em;
+	position: absolute;
+}
+.emp { color: #55b8ff; }
+#header h1 {
+	float: left;
+	margin-left: 3em;
+	margin-top: 0.8em;
+	font-size: 3em;
+	color: #fff;
+	position: absolute;
+	}
+#header p { 
+	margin-left: 9em;
+	margin-top: 5.5em;
+	color: white;
+	position: absolute; }
+
+#menu{
+	margin-left: 50em;
+	position: absolute;
+	margin-top: 5em;
+}
+
+img { border: 0; }
+p  { margin: 5px 0 15px; line-height: 1.6em; color: white; }
+
+
+	#top li { list-style: none; display: inline; position: absolute;}
+	#top li a { float: left; padding: 6px 20px; margin: 3px 2px 0 0; color: #ccc; }
+	#top li a.current { color: #fff; background: #55b8ff; }
+	#top li a:hover { color: #55b8ff; }
+	
+	
+#home{
+	margin-left: 1em;
+	position: absolute;
+}	
+#menu1{
+	margin-left: 8em;
+	position: absolute;
+
+}	
+#menu2{
+	margin-left: 15em;
+	position: absolute;
+
+}	
+#menu3{
+	margin-left: 22em;
+	position: absolute;
+
+}	
+	
+#contain { position: absolute; border: 1px white solid; width: 50em; height: 25em; margin-top: 15em; margin-left: 20em; margin-right: 20em; margin-bottom: 5em;  }
+#div1 { height: 80px; width: 270px; margin-top: 45em; margin-left: 130px; position: absolute; }
+
+#div2{
+	width: 30em;
+	margin-left: 420px;
+	margin-top: 45em;
+	position: absolute;
+}
+
+.modern {
+  display: inline-block;
+  padding: 8px 15px;
+  background: #55b8ff;
+  border: 1px solid rgba(0,0,0,0.15);
+  transition: all 0.3s ease-out;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.5),
+    0 2px 2px rgba(0,0,0,0.3),
+    0 0 4px 1px rgba(0,0,0,0.2);
+    
+  /*font*/
+  color: white;
+  font-size: 1em;  
+}
+	.modern:hover  { background: #0096ff; }
+
+#div3{
+	width: 150px;
+	height: 80px;
+	margin-left: 900px;
+	margin-top: 650px;
+	position: absolute;
+	color: white;
+	font-style: bold;
+	font-size: 20px;
+}
+	#div3 .emp{
+		font-size: 49px;
+		font-style: bold;
+	}
+a{
+	text-decoration: none;
+}
+
+
+
+#div4{
+	width: 290px;
+	height: 40px;
+	margin-left: 130px;
+	margin-top: 60em;
+	position: absolute;
+	border-bottom: 1px solid gray;
+}	
+#div5{
+	width: 290px;
+	height: 40px;
+	margin-left: 480px;
+	margin-top: 60em;
+	border-bottom: 1px solid gray;
+	position: absolute;
+}	
+#div6{
+	width: 290px;
+	height: 40px;
+	margin-left: 800px;
+	margin-top: 60em;
+	position: absolute;
+	border-bottom: 1px solid gray;
+
+}
+#div7{
+	position: absolute;
+	width: 290px;
+	height: 100px;
+	margin-top: 920px;
+	margin-left: 130px;
+	border-bottom: 1px solid gray;
+	text-align: center;
+}
+#div8{
+	position: absolute;
+	width: 290px;
+	height: 100px;
+	margin-top: 920px;
+	margin-left: 480px;
+	border-bottom: 1px solid gray;
+}
+#div9{
+	position: absolute;
+	width: 290px;
+	height: 100px;
+	margin-top: 920px;
+	margin-left: 800px;
+	border-bottom: 1px solid gray;
+}
+#div10{
+	position: absolute;
+	width: 290px;
+	height: 100px;
+	margin-top: 1040px;
+	margin-left: 130px;
+}
+#div11{
+	position: absolute;
+	width: 290px;
+	height: 100px;
+	margin-top: 1040px;
+	margin-left: 480px;
+}
+#div12{
+	position: absolute;
+	width: 290px;
+	height: 100px;
+	margin-top: 1040px;
+	margin-left: 800px;
+}
+
+#footer {
+	margin-left: 130px;
+	width: 800px;
+	height: 50px;
+	position: absolute;
+	margin-top: 1250px;
+}
+
+#btn{
+	margin-top: 10px;
+	width: 110px;
+	height: 45px;
+}
+
+
+/*menu1*/
+#con1{
+	width: 180px;
+	height: 25px;
+	position: absolute;
+	margin-left: 150px;
+	margin-top: 250px; 
+}
+#conimg{
+	position: absolute;
+	border: 1px solid white;
+	margin-left: 0px;
+	margin-top: 30px;
+	width: 450px;
+	height: 250px;
+}
+
+#con2 {
+	position: absolute;
+	width: 300px;
+	height: 250px;
+	margin-top: 30px;
+	margin-left: 500px;
+}
+	#con2 .h2{
+		letter-spacing: 5px;
+	}
+
+#con3{
+	width: 230px;
+	height: 30px;
+	margin-top: 350px;
+	position: absolute;
+	border-bottom: 1px solid white;
+}	
+#con4{
+	width: 230px;
+	height: 30px;
+	margin-top: 350px;
+	margin-left: 280px;
+	border-bottom: 1px solid white;
+	position: absolute;
+}	
+#con5{
+	width: 230px;
+	height: 30px;
+	margin-top: 350px;
+	margin-left: 570px;
+	position: absolute;
+	border-bottom: 1px solid white;
+
+}
+
+#con6{
+	width: 230px;
+	height: 300px;
+	margin-top: 390px;
+	position: absolute;
+}	
+#con7{
+	width: 230px;
+	height: 300px;
+	margin-top: 390px;
+	margin-left: 280px;
+	position: absolute;
+}	
+#con8{
+	width: 230px;
+	height: 300px;
+	margin-top: 390px;
+	margin-left: 570px;
+	position: absolute;
+
+}
+
+
+/*menu2*/
+
+.simple-input {
+    display: block;
+    padding: 5px;
+    border: 4px solid #beefff;
+    border-radius: 5px;
+    color: #333;
+    transition: all 0.3s ease-out;
+    width: 500px;
+    height: 20px;
+}
+ 
+.simple-input:hover {
+    border-radius: 8px
+}
+ 
+.simple-input:focus {
+    outline: none;
+    border-radius: 8px;
+    border-color: #55b8ff;
+}
+
+
+.simple-message {
+    display: block;
+    padding: 5px;
+    border: 4px solid #beefff;
+    border-radius: 5px;
+    color: #333;
+    transition: all 0.3s ease-out;
+    width: 500px;
+    height: 150px;
+}
+ 
+.simple-message:hover {
+    border-radius: 8px
+}
+ 
+.simple-message:focus {
+    outline: none;
+    border-radius: 8px;
+    border-color: #55b8ff;
+}
+
+#input1{
+	width: 520px;
+	margin-top: 80px;
+	text-align: center;
+	margin-left: 150px;
+	}
+#input2{
+	width: 520px;
+	margin-top: 10px;
+	text-align: center;
+	margin-left: 150px;
+	}
+#input3{
+	width: 520px;
+	margin-top: 10px;
+	text-align: center;
+	margin-left: 150px;
+	}
+#input4{
+	width: 520px;
+	margin-top: 10px;
+	text-align: center;
+	margin-left: 150px;
+	}
+
+#sub{
+	width: 200px;
+	height: 50px;
+	margin-left: 310px;
+	padding-top: 10px;
+	margin-top: 50px;
+}
+
+#btn{
+	margin-top: 30px;
+	width: 110px;
+	height: 38px;
+	margin-left: 600px;
+}
+
+.modern {
+  display: inline-block;
+  padding: 8px 15px;
+  background: #55b8ff;
+  border: 1px solid rgba(0,0,0,0.15);
+  transition: all 0.3s ease-out;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.5),
+    0 2px 2px rgba(0,0,0,0.3),
+    0 0 4px 1px rgba(0,0,0,0.2);
+    
+  /*font*/
+  color: white;
+  font-size: 13px;  
+}
+    
+    .modern:hover  { background: #0096ff; }
+    
+	
+#contain2 { position: absolute; width: 850px; height: 750px; margin-top: 270px; margin-left: 150px; margin-right: 150px; text-align: left; }
